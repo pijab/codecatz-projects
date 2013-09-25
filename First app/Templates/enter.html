@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="{{ url_for('.static', filename='bootstrap/css/bootstrap.css') }}" rel="stylesheet" type="text/css"/> <!--flasku povemo kateri file bi radi vkljucili-->
+		<link href="{{ url_for('.static', filename='css/custom.css') }}" rel ="stylesheet" type="text/css"/>
+		<link href='http://fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'>
+		<title>Beautiful web</title>
+	</head>
+
+	<body id="firstpage_bg">
+		
+		<div id="logo">
+			<a href='/home'><img src="{{ url_for('.static', filename='img/logo2.png') }}"/></a>
+		</div>
+		<div id="napis">
+			<img src="{{ url_for('.static', filename='img/napis.png') }}"/>
+		</div>
+	
+		<script src="{{ url_for('.static', filename='js/jquery-1.10.2.min.js') }}"></script> <!-- dodan jQuery, ki mora biti nad bootstrapom, ker se na strani najprej naloži knjižnica iz jQueryja in šele potem bootstrap -->
+		<script src="{{ url_for('.static', filename='js/jquery-ui-1.10.3.custom.min.js') }}"></script>
+		<script src="{{ url_for('.static', filename='bootstrap/js/bootstrap.js') }}"></script> <!-- vkljucen JavaScript iz bootstrapa -->
+		<script src="{{ url_for('.static', filename='js/script.js') }}"></script>
+	</body>
+</html>

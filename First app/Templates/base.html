@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="{{ url_for('.static', filename='bootstrap/css/bootstrap.css') }}" rel="stylesheet" type="text/css"/> <!--flasku povemo kateri file bi radi vkljucili-->
+		<link href="{{ url_for('.static', filename='css/slider.css') }}" rel ="stylesheet" type="text/css"/>
+		<link href="{{ url_for('.static', filename='css/custom.css') }}" rel ="stylesheet" type="text/css" media="screen"/>
+		<link href="{{ url_for('.static', filename='css/jquery-ui-1.10.3.custom.css') }}" rel ="stylesheet" type="text/css"/>
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,400' rel='stylesheet' type='text/css'>
+		<title>Beautiful web</title>
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="navbar">
+				<a class="navbar-brand" href="/"></a>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="/home">Home</a></li> <!-- anchor # posebna vrsta linkov, znotraj strani se lahko premikaš med deli, zamenjali smo ga z / -->
+						<li><a href="#">Litterbox</a>
+							<ul>
+								<li><a href="/demo">Complicator</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Sandbox</a>
+							<ul>
+								<li><a href="/sandbox">Members</a></li>
+							</ul>
+						</li>
+						<!--li><a href="/newstuff">Awesome</a></li-->
+					</ul>
+			</div>
+		</div>
+
+		<div class="container"> <!-- div je block element, span je inline -->
+
+
+
+			{% block content %} <!-- ustvari nek block oziroma prazen prostor v katerega bomo nekaj dali - to kar bomo dali noter, poimenujemo npr. content -->
+			{% endblock %}
+
+
+
+		</div> <!-- konec containerja -->
+
+		<div id="footer">
+			<div class="container">
+				<p class="text-muted credit">© CodeCatz</p>
+			</div>
+		</div>
+
+		<script src="{{ url_for('.static', filename='js/jquery-1.10.2.min.js') }}"></script> <!-- dodan jQuery, ki mora biti nad bootstrapom, ker se na strani najprej naloži knjižnica iz jQueryja in šele potem bootstrap -->
+		<script src="{{ url_for('.static', filename='js/jquery-ui-1.10.3.custom.min.js') }}"></script>
+		<script src="{{ url_for('.static', filename='js/jquery.validate.js') }}"></script>
+		<script src="{{ url_for('.static', filename='bootstrap/js/bootstrap.js') }}"></script> <!-- vkljucen JavaScript iz bootstrapa -->
+		<script src="{{ url_for('.static', filename='js/jbootstrap-slider.js') }}"></script>
+		<script src="{{ url_for('.static', filename='js/script.js') }}"></script>
+		
+
+	</body>
+</html>

@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="calc_p2">
+	<form role="form" name="complicators" id="specialForm" action="/complicator" method="post">
+		<br>
+
+		<div class="form-group">
+			<h4>1. Let's start off with the basic questions. What's your name?</h4>
+			<!--div class="error-label-age error-label"></div-->
+			<label class="control-label" for="type_name"></label>
+			<br>
+			Type name: <input type="text" name="type_name" id="name">
+		</div>
+
+		<br>
+
+		<div class="form-group">
+			<!--div class="error-label-age error-label"></div-->
+			<label class="control-label" for="gender"></label>
+			<h4>2. Please choose your gender.</h4>
+				<input type="radio" name="gender" id="male" value="1"> Male
+			<br>
+				<input type="radio" name="gender" id="female" value="1"> Female
+		</div>
+
+		<br>
+
+		<div class="form-group">
+			<!--div class="error-label-age error-label"></div-->
+			<label class="control-label" for="age"></label>
+			<h4>3. How old are you?</h4>
+			<br>
+				Age: <input type="text" name="age" id="age">
+		</div>
+
+		<br>
+
+		<div class="form-group">
+			<!--div class="error-label-age error-label"></div-->
+			<label class="control-label" for="status"></label>
+			<h4>4. How would you define your relationship status?</h4>
+				<input type="radio" name="status" id="single" value="1"> Single
+			<br>
+				<input type="radio" name="status" id="relationship" value="2"> In relationship
+			<br>
+				<input type="radio" name="status" id="open" value="3"> In open relationship
+			<br>
+				<input type="radio" name="status" id="complicated" value="4"> It's complicated
+			<br>
+				<input type="radio" name="status" id="pizza" value="5"> I'm a pizza
+			<br>
+				<input type="radio" name="status" id="depends" value="6"> Depends
+		</div>
+
+		<br>
+
+		<div class="form-group">
+			<!--div class="error-label-age error-label"></div-->
+			<label class="control-label" for="ignorance"></label>
+			<h4>5. How ignorant of the world are you?</h4>
+			<input type="text" name ="ignorance" id="foo" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide">
+
+		<br><br>
+				<p>(0 means 'stressing yourself over every little thing' and 100 means 'I don't give a shit.')</p>
+		</div>
+
+		<br>
+
+		<div class="form-group">
+			<!--div class="error-label-age error-label"></div-->
+			<label class="control-label" for="money_have"></label>
+			<h4>6. How much money do you have (in Euros)?</h4>
+			<br>
+			I have: <input type="text" name="money_have"> €
+		</div>
+
+		<br>
+
+		<div class="form-group">
+			<!--div class="error-label-age error-label"></div-->
+			<label class="control-label" for="money_wants"></label>
+			<h4>7. How much money do you want (in Euros)?</h4>
+			<br>
+			I want: <input type="text" name="money_wants"> €
+		</div>
+
+		<br>
+
+		<div class="form-group">
+			<!--div class="error-label-age error-label"></div-->
+			<label class="control-label" for="popularity_online"></label>
+			<h4>8. How many friends do you have on Facebook and/or Twitter?</h4>
+			<br>
+			I have <input type="text" name="popularity_online"> FB and/or Twitter friends.
+		</div>
+
+		<br>
+
+		<div class="form-group">
+			<!--div class="error-label-age error-label"></div-->
+			<label class="control-label" for="rl_friends"></label>
+			<h4>9. How many friends do you have in real life?</h4>
+			<br>
+			I have <input type="text" name="rl_friends"> friends.
+		</div>
+
+		<br>
+		<br><br>
+
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary btn-lg">Calculate</button>
+		</div>
+
+		<br><br><br>
+
+	</form>
+</div>
+
+{% endblock %}
